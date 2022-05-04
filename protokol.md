@@ -1,12 +1,38 @@
 
-### Scénář
-- závody bojového umění
-- databáze závodníku  - jméno,příjmení,email,věk,technický stupeň (10kyu ----- 1 kyu---- 1 dan ------ 10 dan)
-- při organizaci závodu (losování lidí, kteří se budou účastnit) je omezení věkem i technickým stupněm ze zhora i zdola (v aplikaci se dá zvolit)
-- při spuštění závodu, se vybraní uživatelé rozdělí do poolů po 3 lidech
-  - vítěz prvního poolu se utká se 2. z posledního poolu, poslední vypadává
-- zápasí se na 2 vítězné body (M,D,K,T,H), X je remíza, E je prodloužení, kolečko je odstoupení, nebo do vypršení času
-- zápasník může odstoupit
+## Scénář
+Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní pořádat turnaje v bojovém umění.
 
-### Požadavky
-- Sledovat výsledky 
+## Požadavky
+- Evidence závodníků - databáze obsahující jejich jméno, příjmení, e-mail, věk a technický stupeň (10kyu ----- 1 kyu - 1 dan ------ 10 dan)
+- Při organizaci závodu je omezení na věk a technický stupeň - omezení z hora i z dola - tito se pak účastní turnaje
+- Při spuštění dojde k rozdělění do 3 člených poolů
+  - Vítěz prvního poolu se utká s druhým z posledního poolu
+  - Vítěz posledního poou se utká s druhým z prvního poolu
+  - Závodníci poté postupují v single eliminination bracket dokud nezbyde jeden vítěz
+- Aplikace musí umožnňovat vyplňovat výsledky v poolech a pavoukovi
+#### Utkání
+- Zápasí se na 2 vítězné body
+  - M, D, K, T
+- H - napomenutí
+    - pokud dostane hráč 2 napomenutí, změní se v 1 vítězný bod
+- X - remíza
+- E - prodloužení
+- oo - odstoupení     
+
+## Technologie
+- Windows forms
+- SQLite databáze
+- Dapper
+- Nlog
+- Newtonsoft
+- OOP
+
+## Časový plán
+
+## Otázky
+##### Co když není počet závodníků dělitelný třemi ?
+Pokud by v jednom poolu zůstali pouze dva závodníci, automaticky postupují, je pouze třeba rozhodnout o jejich pořadí. 
+V případě, že by zůstal pouze jeden závodník, dojde namísto toho k rozdělení do 2 poolu po 2.
+##### Co když vyjde lichý počet poolů ?
+Jeden ze závodníků přeskakuje jednu úroveň pavouka.
+
