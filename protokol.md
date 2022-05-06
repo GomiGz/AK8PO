@@ -35,11 +35,12 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
 | Příprava prostředí | 1 | 1 |
 | Zprovoznění a vytvoření databáze | 2 |  |
 | Vytvoření správy závodníků | 5 |  |
+| Vytvoření stránky pro spuštění turnaje | 2 | |
 | Generování turnajového rozlosování | 3 | |
 | Vytvoření grafického zobrazení pavouka | 10 | |
 | Vyplňování výsledků utkání | 4 | |
 | Rozšíření výsledků utkání o konkrétní bodová hodnocení | 3 | |
-| **Celkem** | **38**  |  |
+| **Celkem** | **40**  |  |
 
 ## Otázky
 ##### Co když není počet závodníků dělitelný třemi ?
