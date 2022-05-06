@@ -20,14 +20,26 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
 - oo - odstoupení     
 
 ## Technologie
-- Windows forms
-- SQLite databáze
-- Dapper
-- Nlog
-- Newtonsoft
-- OOP
+- Windows forms (uživatelské prostředí)
+- SQLite databáze (Relační databáze)
+- Dapper (Připojení aplikace k DB)
+- Nlog (Logování 
 
 ## Časový plán
+| Aktivita | Předpokládaná<br>časová náročnost<br>(hod) | Konečná<br>časová náročnost<br>(hod) |
+|----------|--------------------------------------------|--------------------------------------|
+| Vyslechnutí požadavků a rozsahu prací | 1 | 1 |
+| Sepsání protokolu | 4 | |
+| Design architektury | 3 | |
+| Návrh datového modelu | 2 | |
+| Příprava prostředí | 1 | 1 |
+| Zprovoznění a vytvoření databáze | 2 |  |
+| Vytvoření správy závodníků | 5 |  |
+| Generování turnajového rozlosování | 3 | |
+| Vytvoření grafického zobrazení pavouka | 10 | |
+| Vyplňování výsledků utkání | 4 | |
+| Rozšíření výsledků utkání o konkrétní bodová hodnocení | 3 | |
+| **Celkem** | **38**  |  |
 
 ## Otázky
 ##### Co když není počet závodníků dělitelný třemi ?
