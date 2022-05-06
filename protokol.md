@@ -11,7 +11,7 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
   - Závodníci poté postupují v single eliminination bracket dokud nezbyde jeden vítěz
 - Aplikace musí umožnňovat vyplňovat výsledky v poolech a pavoukovi
 #### Utkání
-- Zápasí se na 2 vítězné body
+- Zápasí se na 2 vítězné body nebo do vypršení 3 minut
   - M, D, K, T
 - H - napomenutí
     - pokud dostane hráč 2 napomenutí, změní se v 1 vítězný bod
@@ -47,4 +47,7 @@ Pokud by v jednom poolu zůstali pouze dva závodníci, automaticky postupují, 
 V případě, že by zůstal pouze jeden závodník, dojde namísto toho k rozdělení do 2 poolu po 2.
 ##### Co když vyjde lichý počet poolů ?
 Jeden ze závodníků přeskakuje jednu úroveň pavouka.
-
+##### Jak se losuje ?
+Losuje se úplně náhodně.
+##### Co když mají v poolu stejný počet výher ?
+Rozhoduje počet získaných vítězných bodů.
