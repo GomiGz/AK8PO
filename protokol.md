@@ -29,8 +29,8 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
 | Aktivita | Předpokládaná<br>časová náročnost<br>(hod) | Konečná<br>časová náročnost<br>(hod) |
 |----------|--------------------------------------------|--------------------------------------|
 | Vyslechnutí požadavků a rozsahu prací | 1 | 1 |
-| Sepsání protokolu | 4 | |
-| Design architektury | 3 | |
+| Sepsání protokolu | 4 | 3 |
+| Design architektury | 3 | 2 |
 | Návrh datového modelu | 2 | |
 | Příprava prostředí | 1 | 1 |
 | Zprovoznění a vytvoření databáze | 2 |  |
