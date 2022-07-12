@@ -127,5 +127,58 @@ namespace TP_MAUI
             _conn.Execute(query);
             CloseConnection();
         }
+
+        public List<Player> FindPlayers(int upperAge, int lowerAge, int upperSkill, int lowerSkill)
+        {
+            OpenConnection();
+            var query = $@"SELECT 
+                               PlayerId,
+                               FirstName,
+                               LastName,
+                               Age
+                            FROM Players
+                            WHERE
+                            Age >= {lowerAge} and Age <= {upperAge} and
+                            LevelId >= {lowerSkill} and LevelId <= {upperSkill}";
+            var result = _conn.Query<Player>(query);
+            CloseConnection();
+            return result.ToList();
+        }
+
+        public int InsertTournament(string tournamentName)
+        {
+            OpenConnection();
+
+            var query = $"INSERT INTO Tournaments (" +
+                            $"TournamentName" +
+                        $")" +
+                        $"VALUES('{tournamentName}')";
+            _conn.Execute(query);
+            query = "SELECT last_insert_rowid()";
+            var id = _conn.QueryFirstOrDefault<int>(query,0);
+            CloseConnection();
+            return id;
+        }
+
+        public void InsertMatches(List<Match> matches)
+        {
+            OpenConnection();
+
+            string query = $"INSERT INTO Matches (" +
+                            $"TournamentId," +
+                            $"TournamentDepth," +
+                            $"TournamentLevel," +
+                            $"Player0," +
+                            $"Player1" +
+                        $") VALUES ";
+
+            foreach (Match match in matches) {
+                query += 
+                $"({match.TournamentId},{match.TournamentDepth},{match.TournamentLevel},{match.Player0},{match.Player1}),";
+            }
+            query = query.Substring(0,query.Length - 1);
+            _conn.Execute(query);
+            CloseConnection();
+        }
     }
 }
