@@ -31,10 +31,10 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
 | Vyslechnutí požadavků a rozsahu prací | 1 | 1 |
 | Sepsání protokolu | 4 | 3 |
 | Design architektury | 3 | 2 |
-| Návrh datového modelu | 2 | |
+| Návrh datového modelu | 2 | 2|
 | Příprava prostředí | 1 | 1 |
-| Zprovoznění a vytvoření databáze | 2 |  |
-| Vytvoření správy závodníků | 5 |  |
+| Zprovoznění a vytvoření databáze | 2 | 15 |
+| Vytvoření správy závodníků | 5 | 5 |
 | Vytvoření stránky pro spuštění turnaje | 2 | |
 | Generování turnajového rozlosování | 3 | |
 | Vytvoření grafického zobrazení pavouka | 10 | |
