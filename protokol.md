@@ -35,8 +35,8 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
 | Příprava prostředí | 1 | 1 |
 | Zprovoznění a vytvoření databáze | 2 | 15 |
 | Vytvoření správy závodníků | 5 | 5 |
-| Vytvoření stránky pro spuštění turnaje | 2 | |
-| Generování turnajového rozlosování | 3 | |
+| Vytvoření stránky pro spuštění turnaje | 2 | 2|
+| Generování turnajového rozlosování | 3 |2 |
 | Vytvoření grafického zobrazení pavouka | 10 | |
 | Vyplňování výsledků utkání | 4 | |
 | Rozšíření výsledků utkání o konkrétní bodová hodnocení | 3 | |
