@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TP_MAUI.Models
+﻿namespace TP_MAUI.Models
 {
-    internal class Tournament
+    public class Tournament
     {
         public int TournamentId { get; set; }
         public string TournamentName { get; set; }
@@ -29,6 +23,24 @@ namespace TP_MAUI.Models
                             null,
                             null,
                             null));
+            }
+            var totalDepth = Convert.ToInt32(Math.Sqrt(players.Count));
+            for (int i = 1; i < totalDepth; i++)
+            {
+                var matchCount = Math.Pow(2, totalDepth - 1 - i);
+                for (int j = 0; j < matchCount; j++)
+                {
+                    Matches.Add(
+                            new Match(
+                                TournamentId,
+                                i,
+                                j,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null));
+                }
             }
             App.dbContext.InsertMatches(Matches);
         }

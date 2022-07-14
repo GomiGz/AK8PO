@@ -17,6 +17,9 @@ public partial class TournamentsPage : ContentPage
 		UpperPicker.ItemDisplayBinding = new Binding("LevelName");
         LowerPicker.ItemsSource = App.dbContext.GetLevels();
         LowerPicker.ItemDisplayBinding = new Binding("LevelName");
+		TournamentsList.ItemsSource = App.dbContext.GetTournaments();
+		SuccessLabel.Text = "";
+		TournamentErrorLabel.Text = "";
         base.OnAppearing();
 	}
 
@@ -42,6 +45,12 @@ public partial class TournamentsPage : ContentPage
 
     public void StartTournament(object sender, EventArgs e)
     {
+		if (String.IsNullOrWhiteSpace(TournamentNameEntry.Text))
+		{
+            SuccessLabel.Text = "Nebyl zadán název";
+            SuccessLabel.TextColor = Colors.Red;
+            return;
+        }
 		if (players is null || players.Count == 0)
 		{
             SuccessLabel.Text = "Nebyli vybráni hráèi";
@@ -55,6 +64,32 @@ public partial class TournamentsPage : ContentPage
 		SuccessLabel.Text = "Turnaj spuštìn";
 		SuccessLabel.TextColor = Colors.Green;
         players = null;
+        TournamentsList.ItemsSource = App.dbContext.GetTournaments();
     }
 
+	protected void CancelTournament(object sender, EventArgs e)
+	{
+		var item = TournamentsList.SelectedItem;
+		if(item is null)
+		{
+			TournamentErrorLabel.Text = "Nebyl vybrán turnaj";
+			return;
+		}
+		App.dbContext.DeleteTournament(((Tournament)item).TournamentId);
+        TournamentsList.ItemsSource = App.dbContext.GetTournaments();
+    }
+
+    protected void ResetTournament(object sender, EventArgs e)
+    {
+        var item = TournamentsList.SelectedItem;
+        if (item is null)
+        {
+            TournamentErrorLabel.Text = "Nebyl vybrán turnaj";
+			TournamentErrorLabel.TextColor = Colors.Red;
+            return;
+        }
+        App.dbContext.ResetTournament(((Tournament)item).TournamentId);
+        TournamentErrorLabel.Text = "Turnaj restartován";
+        TournamentErrorLabel.TextColor = Colors.Green;
+    }
 }
