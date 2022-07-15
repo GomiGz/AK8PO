@@ -20,10 +20,10 @@ Přišel za námi zákazník a chtěl by vytvořit aplikaci, která mu umožní 
 - oo - odstoupení     
 
 ## Technologie
-- Windows forms (uživatelské prostředí)
+- .NET MAUI (uživatelské prostředí)
 - SQLite databáze (Relační databáze)
 - Dapper (Připojení aplikace k DB)
-- Nlog (Logování 
+- Nlog (Logování)
 
 ## Časový plán
 | Aktivita | Předpokládaná<br>časová náročnost<br>(hod) | Konečná<br>časová náročnost<br>(hod) |
